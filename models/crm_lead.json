@@ -1,0 +1,667 @@
+{
+    "name": {
+        "type": "char",
+        "required": true,
+        "string": "Opportunity"
+    },
+    "partner_id": {
+        "type": "many2one",
+        "help": "Linked partner (optional). Usually created when converting the lead. You can find a partner by its Name, TIN, Email or Internal Reference.",
+        "required": false,
+        "string": "Customer"
+    },
+    "active": {
+        "type": "boolean",
+        "required": false,
+        "string": "Active"
+    },
+    "date_action_last": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Action"
+    },
+    "email_from": {
+        "type": "char",
+        "help": "Email address of the contact",
+        "required": false,
+        "string": "Email"
+    },
+    "website": {
+        "type": "char",
+        "help": "Website of the contact",
+        "required": false,
+        "string": "Website"
+    },
+    "team_id": {
+        "type": "many2one",
+        "help": "When sending mails, the default email address is taken from the Sales Team.",
+        "required": false,
+        "string": "Sales Team"
+    },
+    "kanban_state": {
+        "type": "selection",
+        "required": false,
+        "string": "Kanban State"
+    },
+    "description": {
+        "type": "text",
+        "required": false,
+        "string": "Notes"
+    },
+    "tag_ids": {
+        "type": "many2many",
+        "help": "Classify and analyze your lead/opportunity categories like: Training, Service",
+        "required": false,
+        "string": "Tags"
+    },
+    "contact_name": {
+        "type": "char",
+        "required": false,
+        "string": "Contact Name"
+    },
+    "partner_name": {
+        "type": "char",
+        "help": "The name of the future partner company that will be created while converting the lead into opportunity",
+        "required": false,
+        "string": "Company Name"
+    },
+    "type": {
+        "type": "selection",
+        "help": "Type is used to separate Leads and Opportunities",
+        "required": true,
+        "string": "Type"
+    },
+    "priority": {
+        "type": "selection",
+        "required": false,
+        "string": "Priority"
+    },
+    "date_closed": {
+        "type": "datetime",
+        "required": false,
+        "string": "Closed Date"
+    },
+    "stage_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Stage"
+    },
+    "user_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Salesperson"
+    },
+    "date_open": {
+        "type": "datetime",
+        "required": false,
+        "string": "Assignation Date"
+    },
+    "day_open": {
+        "type": "float",
+        "required": false,
+        "string": "Days to Assign"
+    },
+    "day_close": {
+        "type": "float",
+        "required": false,
+        "string": "Days to Close"
+    },
+    "date_last_stage_update": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Stage Update"
+    },
+    "date_conversion": {
+        "type": "datetime",
+        "required": false,
+        "string": "Conversion Date"
+    },
+    "probability": {
+        "type": "float",
+        "required": false,
+        "string": "Probability"
+    },
+    "automated_probability": {
+        "type": "float",
+        "required": false,
+        "string": "Automated Probability"
+    },
+    "is_automated_probability": {
+        "type": "boolean",
+        "required": false,
+        "string": "Is automated probability?"
+    },
+    "phone_state": {
+        "type": "selection",
+        "required": false,
+        "string": "Phone Quality"
+    },
+    "email_state": {
+        "type": "selection",
+        "required": false,
+        "string": "Email Quality"
+    },
+    "expected_revenue": {
+        "type": "monetary",
+        "required": false,
+        "string": "Prorated Revenue"
+    },
+    "date_deadline": {
+        "type": "date",
+        "help": "Estimate of the date on which the opportunity will be won.",
+        "required": false,
+        "string": "Expected Closing"
+    },
+    "color": {
+        "type": "integer",
+        "required": false,
+        "string": "Color Index"
+    },
+    "partner_is_blacklisted": {
+        "type": "boolean",
+        "help": "If the email address is on the blacklist, the contact won't receive mass mailing anymore, from any list",
+        "required": false,
+        "string": "Partner is blacklisted"
+    },
+    "company_currency": {
+        "type": "many2one",
+        "required": false,
+        "string": "Currency"
+    },
+    "user_email": {
+        "type": "char",
+        "required": false,
+        "string": "User Email"
+    },
+    "user_login": {
+        "type": "char",
+        "help": "Used to log into the system",
+        "required": false,
+        "string": "User Login"
+    },
+    "street": {
+        "type": "char",
+        "required": false,
+        "string": "Street"
+    },
+    "street2": {
+        "type": "char",
+        "required": false,
+        "string": "Street2"
+    },
+    "zip": {
+        "type": "char",
+        "required": false,
+        "string": "Zip"
+    },
+    "city": {
+        "type": "char",
+        "required": false,
+        "string": "City"
+    },
+    "state_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "State"
+    },
+    "country_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Country"
+    },
+    "lang_id": {
+        "type": "many2one",
+        "help": "Language of the lead.",
+        "required": false,
+        "string": "Language"
+    },
+    "phone": {
+        "type": "char",
+        "required": false,
+        "string": "Phone"
+    },
+    "mobile": {
+        "type": "char",
+        "required": false,
+        "string": "Mobile"
+    },
+    "function": {
+        "type": "char",
+        "required": false,
+        "string": "Job Position"
+    },
+    "title": {
+        "type": "many2one",
+        "required": false,
+        "string": "Title"
+    },
+    "company_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Company"
+    },
+    "meeting_count": {
+        "type": "integer",
+        "required": false,
+        "string": "# Meetings"
+    },
+    "lost_reason": {
+        "type": "many2one",
+        "required": false,
+        "string": "Lost Reason"
+    },
+    "check_list_line_ids": {
+        "type": "many2many",
+        "help": "Confirm that you finished all the points. Otherwise, you would not be able to move the lead forward",
+        "required": false,
+        "string": "Check list"
+    },
+    "check_list_history_ids": {
+        "type": "one2many",
+        "required": false,
+        "string": "History"
+    },
+    "check_list_len": {
+        "type": "integer",
+        "required": false,
+        "string": "Total points"
+    },
+    "checklist_progress": {
+        "type": "float",
+        "required": false,
+        "string": "Progress"
+    },
+    "won_status": {
+        "type": "selection",
+        "required": false,
+        "string": "Is Won"
+    },
+    "days_to_convert": {
+        "type": "float",
+        "required": false,
+        "string": "Days To Convert"
+    },
+    "days_exceeding_closing": {
+        "type": "float",
+        "required": false,
+        "string": "Exceeded Closing Days"
+    },
+    "lead_mining_request_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Lead Mining Request"
+    },
+    "reveal_id": {
+        "type": "char",
+        "required": false,
+        "string": "Reveal ID"
+    },
+    "iap_enrich_done": {
+        "type": "boolean",
+        "help": "Whether IAP service for lead enrichment based on email has been performed on this lead.",
+        "required": false,
+        "string": "Enrichment done"
+    },
+    "show_enrich_button": {
+        "type": "boolean",
+        "required": false,
+        "string": "Allow manual enrich"
+    },
+    "visitor_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Web Visitors"
+    },
+    "visitor_page_count": {
+        "type": "integer",
+        "required": false,
+        "string": "# Page Views"
+    },
+    "task_ids": {
+        "type": "one2many",
+        "required": false,
+        "string": "Task"
+    },
+    "task_ids_count": {
+        "type": "integer",
+        "required": false,
+        "string": "# Tasks"
+    },
+    "sale_amount_total": {
+        "type": "monetary",
+        "help": "Untaxed Total of Confirmed Orders",
+        "required": false,
+        "string": "Sum of Orders"
+    },
+    "quotation_count": {
+        "type": "integer",
+        "required": false,
+        "string": "Number of Quotations"
+    },
+    "sale_order_count": {
+        "type": "integer",
+        "required": false,
+        "string": "Number of Sale Orders"
+    },
+    "order_ids": {
+        "type": "one2many",
+        "required": false,
+        "string": "Orders"
+    },
+    "customer_partner_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Customer Contact"
+    },
+    "currency_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Currency"
+    },
+    "manager_partner_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Partner"
+    },
+    "architect_employee_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Presales Architect"
+    },
+    "engineer_employee_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Presales Engineer"
+    },
+    "sales_employee_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Inside Sales"
+    },
+    "partner_address_name": {
+        "type": "char",
+        "required": false,
+        "string": "Partner Contact Name"
+    },
+    "partner_address_email": {
+        "type": "char",
+        "required": false,
+        "string": "Partner Contact Email"
+    },
+    "partner_address_phone": {
+        "type": "char",
+        "required": false,
+        "string": "Partner Contact Phone"
+    },
+    "referred": {
+        "type": "many2one",
+        "required": false,
+        "string": "Referred By"
+    },
+    "acr": {
+        "type": "monetary",
+        "help": "Expected Azure Consumption",
+        "required": false,
+        "string": "ACR"
+    },
+    "aca": {
+        "type": "boolean",
+        "help": "Azure Customer Add",
+        "required": false,
+        "string": "ACA"
+    },
+    "pgo": {
+        "type": "boolean",
+        "help": "Partner Generated Opportunity",
+        "required": false,
+        "string": "PGO"
+    },
+    "ip_cosell_approved": {
+        "type": "boolean",
+        "required": false,
+        "string": "IP Cosell Approved"
+    },
+    "msx_id": {
+        "type": "char",
+        "required": false,
+        "string": "MSX ID"
+    },
+    "commit": {
+        "type": "boolean",
+        "required": false,
+        "string": "Commit"
+    },
+    "company_currency_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Currency"
+    },
+    "sgd_currency_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Currency"
+    },
+    "planned_revenue": {
+        "type": "monetary",
+        "required": false,
+        "string": "Expected Revenue"
+    },
+    "sum_planned_revenue": {
+        "type": "monetary",
+        "required": false,
+        "string": "Expected Revenue"
+    },
+    "exp_rev_report_cur": {
+        "type": "monetary",
+        "required": false,
+        "string": "Expected Revenue in Reporting Currency"
+    },
+    "sum_planned_currency": {
+        "type": "monetary",
+        "required": false,
+        "string": "Expected Revenue in Reporting Currency"
+    },
+    "campaign_id": {
+        "type": "many2one",
+        "help": "This is a name that helps you keep track of your different campaign efforts, e.g. Fall_Drive, Christmas_Special",
+        "required": false,
+        "string": "Campaign"
+    },
+    "source_id": {
+        "type": "many2one",
+        "help": "This is the source of the link, e.g. Search Engine, another domain, or name of email list",
+        "required": false,
+        "string": "Source"
+    },
+    "medium_id": {
+        "type": "many2one",
+        "help": "This is the method of delivery, e.g. Postcard, Email, or Banner Ad",
+        "required": false,
+        "string": "Medium"
+    },
+    "activity_ids": {
+        "type": "one2many",
+        "required": false,
+        "string": "Activities"
+    },
+    "activity_state": {
+        "type": "selection",
+        "help": "Status based on activities\nOverdue: Due date is already passed\nToday: Activity date is today\nPlanned: Future activities.",
+        "required": false,
+        "string": "Activity State"
+    },
+    "activity_user_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Responsible User"
+    },
+    "activity_type_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Next Activity Type"
+    },
+    "activity_date_deadline": {
+        "type": "date",
+        "required": false,
+        "string": "Next Activity Deadline"
+    },
+    "activity_summary": {
+        "type": "char",
+        "required": false,
+        "string": "Next Activity Summary"
+    },
+    "activity_exception_decoration": {
+        "type": "selection",
+        "help": "Type of the exception activity on record.",
+        "required": false,
+        "string": "Activity Exception Decoration"
+    },
+    "activity_exception_icon": {
+        "type": "char",
+        "help": "Icon to indicate an exception activity.",
+        "required": false,
+        "string": "Icon"
+    },
+    "email_cc": {
+        "type": "char",
+        "help": "List of cc from incoming emails.",
+        "required": false,
+        "string": "Email cc"
+    },
+    "message_is_follower": {
+        "type": "boolean",
+        "required": false,
+        "string": "Is Follower"
+    },
+    "message_follower_ids": {
+        "type": "one2many",
+        "required": false,
+        "string": "Followers"
+    },
+    "message_partner_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Followers (Partners)"
+    },
+    "message_channel_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Followers (Channels)"
+    },
+    "message_ids": {
+        "type": "one2many",
+        "required": false,
+        "string": "Messages"
+    },
+    "message_unread": {
+        "type": "boolean",
+        "help": "If checked, new messages require your attention.",
+        "required": false,
+        "string": "Unread Messages"
+    },
+    "message_unread_counter": {
+        "type": "integer",
+        "help": "Number of unread messages",
+        "required": false,
+        "string": "Unread Messages Counter"
+    },
+    "message_needaction": {
+        "type": "boolean",
+        "help": "If checked, new messages require your attention.",
+        "required": false,
+        "string": "Action Needed"
+    },
+    "message_needaction_counter": {
+        "type": "integer",
+        "help": "Number of messages which requires an action",
+        "required": false,
+        "string": "Number of Actions"
+    },
+    "message_has_error": {
+        "type": "boolean",
+        "help": "If checked, some messages have a delivery error.",
+        "required": false,
+        "string": "Message Delivery error"
+    },
+    "message_has_error_counter": {
+        "type": "integer",
+        "help": "Number of messages with delivery error",
+        "required": false,
+        "string": "Number of errors"
+    },
+    "message_attachment_count": {
+        "type": "integer",
+        "required": false,
+        "string": "Attachment Count"
+    },
+    "message_main_attachment_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Main Attachment"
+    },
+    "website_message_ids": {
+        "type": "one2many",
+        "help": "Website communication history",
+        "required": false,
+        "string": "Website Messages"
+    },
+    "message_has_sms_error": {
+        "type": "boolean",
+        "help": "If checked, some messages have a delivery error.",
+        "required": false,
+        "string": "SMS Delivery error"
+    },
+    "is_blacklisted": {
+        "type": "boolean",
+        "help": "If the email address is on the blacklist, the contact won't receive mass mailing anymore, from any list",
+        "required": false,
+        "string": "Blacklist"
+    },
+    "message_bounce": {
+        "type": "integer",
+        "help": "Counter of the number of bounced emails for this contact",
+        "required": false,
+        "string": "Bounce"
+    },
+    "email_normalized": {
+        "type": "char",
+        "help": "This field is used to search on email address as the primary email field can contain more than strictly an email address.",
+        "required": false,
+        "string": "Normalized Email"
+    },
+    "id": {
+        "type": "integer",
+        "required": false,
+        "string": "ID"
+    },
+    "display_name": {
+        "type": "char",
+        "required": false,
+        "string": "Display Name"
+    },
+    "create_uid": {
+        "type": "many2one",
+        "required": false,
+        "string": "Created by"
+    },
+    "create_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Created on"
+    },
+    "write_uid": {
+        "type": "many2one",
+        "required": false,
+        "string": "Last Updated by"
+    },
+    "write_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Updated on"
+    },
+    "__last_update": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Modified on"
+    }
+}

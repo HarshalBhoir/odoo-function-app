@@ -1,0 +1,768 @@
+{
+    "name": {
+        "type": "char",
+        "string": "Name"
+    },
+    "display_name": {
+        "type": "char",
+        "string": "Display Name"
+    },
+    "date": {
+        "type": "date",
+        "string": "Date"
+    },
+    "title": {
+        "type": "many2one",
+        "string": "Title"
+    },
+    "parent_id": {
+        "type": "many2one",
+        "string": "Related Company"
+    },
+    "parent_name": {
+        "type": "char",
+        "string": "Parent name"
+    },
+    "child_ids": {
+        "type": "one2many",
+        "string": "Contact"
+    },
+    "ref": {
+        "type": "char",
+        "string": "Reference"
+    },
+    "lang": {
+        "type": "selection",
+        "help": "All the emails and documents sent to this contact will be translated in this language.",
+        "string": "Language"
+    },
+    "active_lang_count": {
+        "type": "integer",
+        "string": "Active Lang Count"
+    },
+    "tz": {
+        "type": "selection",
+        "help": "When printing documents and exporting/importing data, time values are computed according to this timezone.\nIf the timezone is not set, UTC (Coordinated Universal Time) is used.\nAnywhere else, time values are computed according to the time offset of your web client.",
+        "string": "Timezone"
+    },
+    "tz_offset": {
+        "type": "char",
+        "string": "Timezone offset"
+    },
+    "vat": {
+        "type": "char",
+        "help": "The Tax Identification Number. Complete it if the contact is subjected to government taxes. Used in some legal statements.",
+        "string": "Tax ID"
+    },
+    "same_vat_partner_id": {
+        "type": "many2one",
+        "string": "Partner with same Tax ID"
+    },
+    "bank_ids": {
+        "type": "one2many",
+        "string": "Banks"
+    },
+    "website": {
+        "type": "char",
+        "string": "Website Link"
+    },
+    "comment": {
+        "type": "text",
+        "string": "Notes"
+    },
+    "category_id": {
+        "type": "many2many",
+        "string": "Tags"
+    },
+    "credit_limit": {
+        "type": "float",
+        "string": "Credit Limit"
+    },
+    "active": {
+        "type": "boolean",
+        "string": "Active"
+    },
+    "employee": {
+        "type": "boolean",
+        "help": "Check this box if this contact is an Employee.",
+        "string": "Employee"
+    },
+    "function": {
+        "type": "char",
+        "string": "Job Position"
+    },
+    "type": {
+        "type": "selection",
+        "help": "Invoice & Delivery addresses are used in sales orders. Private addresses are only visible by authorized users.",
+        "string": "Address Type"
+    },
+    "street": {
+        "type": "char",
+        "string": "Street"
+    },
+    "street2": {
+        "type": "char",
+        "string": "Street2"
+    },
+    "zip": {
+        "type": "char",
+        "string": "Zip"
+    },
+    "city": {
+        "type": "char",
+        "string": "City"
+    },
+    "state_id": {
+        "type": "many2one",
+        "string": "State"
+    },
+    "country_id": {
+        "type": "many2one",
+        "string": "Country"
+    },
+    "partner_latitude": {
+        "type": "float",
+        "string": "Geo Latitude"
+    },
+    "partner_longitude": {
+        "type": "float",
+        "string": "Geo Longitude"
+    },
+    "email": {
+        "type": "char",
+        "string": "Email"
+    },
+    "email_formatted": {
+        "type": "char",
+        "help": "Format email address \"Name <email@domain>\"",
+        "string": "Formatted Email"
+    },
+    "phone": {
+        "type": "char",
+        "string": "Phone"
+    },
+    "mobile": {
+        "type": "char",
+        "string": "Mobile"
+    },
+    "is_company": {
+        "type": "boolean",
+        "help": "Check if the contact is a company, otherwise it is a person",
+        "string": "Is a Company"
+    },
+    "industry_id": {
+        "type": "many2one",
+        "string": "Industry"
+    },
+    "company_type": {
+        "type": "selection",
+        "string": "Company Type"
+    },
+    "company_id": {
+        "type": "many2one",
+        "string": "Company"
+    },
+    "color": {
+        "type": "integer",
+        "string": "Color Index"
+    },
+    "user_ids": {
+        "type": "one2many",
+        "string": "Users"
+    },
+    "partner_share": {
+        "type": "boolean",
+        "help": "Either customer (not a user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data.",
+        "string": "Share Partner"
+    },
+    "contact_address": {
+        "type": "char",
+        "string": "Complete Address"
+    },
+    "commercial_partner_id": {
+        "type": "many2one",
+        "string": "Commercial Entity"
+    },
+    "commercial_company_name": {
+        "type": "char",
+        "string": "Company Name Entity"
+    },
+    "company_name": {
+        "type": "char",
+        "string": "Company Name"
+    },
+    "self": {
+        "type": "many2one",
+        "string": "Self"
+    },
+    "im_status": {
+        "type": "char",
+        "string": "IM Status"
+    },
+    "activity_ids": {
+        "type": "one2many",
+        "string": "Activities"
+    },
+    "activity_state": {
+        "type": "selection",
+        "help": "Status based on activities\nOverdue: Due date is already passed\nToday: Activity date is today\nPlanned: Future activities.",
+        "string": "Activity State"
+    },
+    "activity_user_id": {
+        "type": "many2one",
+        "string": "Responsible User"
+    },
+    "activity_type_id": {
+        "type": "many2one",
+        "string": "Next Activity Type"
+    },
+    "activity_date_deadline": {
+        "type": "date",
+        "string": "Next Activity Deadline"
+    },
+    "activity_summary": {
+        "type": "char",
+        "string": "Next Activity Summary"
+    },
+    "activity_exception_decoration": {
+        "type": "selection",
+        "help": "Type of the exception activity on record.",
+        "string": "Activity Exception Decoration"
+    },
+    "activity_exception_icon": {
+        "type": "char",
+        "help": "Icon to indicate an exception activity.",
+        "string": "Icon"
+    },
+    "message_is_follower": {
+        "type": "boolean",
+        "string": "Is Follower"
+    },
+    "message_follower_ids": {
+        "type": "one2many",
+        "string": "Followers"
+    },
+    "message_partner_ids": {
+        "type": "many2many",
+        "string": "Followers (Partners)"
+    },
+    "message_channel_ids": {
+        "type": "many2many",
+        "string": "Followers (Channels)"
+    },
+    "message_ids": {
+        "type": "one2many",
+        "string": "Messages"
+    },
+    "message_unread": {
+        "type": "boolean",
+        "help": "If checked, new messages require your attention.",
+        "string": "Unread Messages"
+    },
+    "message_unread_counter": {
+        "type": "integer",
+        "help": "Number of unread messages",
+        "string": "Unread Messages Counter"
+    },
+    "message_needaction": {
+        "type": "boolean",
+        "help": "If checked, new messages require your attention.",
+        "string": "Action Needed"
+    },
+    "message_needaction_counter": {
+        "type": "integer",
+        "help": "Number of messages which requires an action",
+        "string": "Number of Actions"
+    },
+    "message_has_error": {
+        "type": "boolean",
+        "help": "If checked, some messages have a delivery error.",
+        "string": "Message Delivery error"
+    },
+    "message_has_error_counter": {
+        "type": "integer",
+        "help": "Number of messages with delivery error",
+        "string": "Number of errors"
+    },
+    "message_attachment_count": {
+        "type": "integer",
+        "string": "Attachment Count"
+    },
+    "message_main_attachment_id": {
+        "type": "many2one",
+        "string": "Main Attachment"
+    },
+    "email_normalized": {
+        "type": "char",
+        "help": "This field is used to search on email address as the primary email field can contain more than strictly an email address.",
+        "string": "Normalized Email"
+    },
+    "is_blacklisted": {
+        "type": "boolean",
+        "help": "If the email address is on the blacklist, the contact won't receive mass mailing anymore, from any list",
+        "string": "Blacklist"
+    },
+    "message_bounce": {
+        "type": "integer",
+        "help": "Counter of the number of bounced emails for this contact",
+        "string": "Bounce"
+    },
+    "channel_ids": {
+        "type": "many2many",
+        "string": "Channels"
+    },
+    "user_id": {
+        "type": "many2one",
+        "help": "The internal user in charge of this contact.",
+        "string": "Salesperson"
+    },
+    "contact_address_complete": {
+        "type": "char",
+        "string": "Contact Address Complete"
+    },
+    "image_medium": {
+        "type": "binary",
+        "string": "Medium-sized image"
+    },
+    "signup_token": {
+        "type": "char",
+        "string": "Signup Token"
+    },
+    "signup_type": {
+        "type": "char",
+        "string": "Signup Token Type"
+    },
+    "signup_expiration": {
+        "type": "datetime",
+        "string": "Signup Expiration"
+    },
+    "signup_valid": {
+        "type": "boolean",
+        "string": "Signup Token is Valid"
+    },
+    "signup_url": {
+        "type": "char",
+        "string": "Signup URL"
+    },
+    "calendar_last_notif_ack": {
+        "type": "datetime",
+        "string": "Last notification marked as read from base Calendar"
+    },
+    "ocn_token": {
+        "type": "char",
+        "help": "Used for sending notification to registered devices",
+        "string": "OCN Token"
+    },
+    "partner_gid": {
+        "type": "integer",
+        "string": "Company database ID"
+    },
+    "additional_info": {
+        "type": "char",
+        "string": "Additional info"
+    },
+    "phone_sanitized": {
+        "type": "char",
+        "help": "Field used to store sanitized phone number. Helps speeding up searches and comparisons.",
+        "string": "Sanitized Number"
+    },
+    "phone_blacklisted": {
+        "type": "boolean",
+        "help": "If the email address is on the blacklist, the contact won't receive mass mailing anymore, from any list",
+        "string": "Phone Blacklisted"
+    },
+    "property_product_pricelist": {
+        "type": "many2one",
+        "help": "This pricelist will be used, instead of the default one, for sales to the current partner",
+        "string": "Pricelist"
+    },
+    "duplicates_count": {
+        "type": "integer",
+        "string": "Duplicates Count"
+    },
+    "website_message_ids": {
+        "type": "one2many",
+        "help": "Website communication history",
+        "string": "Website Messages"
+    },
+    "message_has_sms_error": {
+        "type": "boolean",
+        "help": "If checked, some messages have a delivery error.",
+        "string": "SMS Delivery error"
+    },
+    "property_stock_customer": {
+        "type": "many2one",
+        "help": "The stock location used as destination when sending goods to this contact.",
+        "string": "Customer Location"
+    },
+    "property_stock_supplier": {
+        "type": "many2one",
+        "help": "The stock location used as source when receiving goods from this contact.",
+        "string": "Vendor Location"
+    },
+    "picking_warn": {
+        "type": "selection",
+        "help": "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field.",
+        "string": "Stock Picking"
+    },
+    "picking_warn_msg": {
+        "type": "text",
+        "string": "Message for Stock Picking"
+    },
+    "certifications_count": {
+        "type": "integer",
+        "string": "Certifications Count"
+    },
+    "certifications_company_count": {
+        "type": "integer",
+        "string": "Company Certifications Count"
+    },
+    "document_count": {
+        "type": "integer",
+        "string": "Document Count"
+    },
+    "ks_office_contact_id": {
+        "type": "char",
+        "string": "Ks Office Contact"
+    },
+    "ks_user_id": {
+        "type": "many2one",
+        "string": "Ks User"
+    },
+    "signature_count": {
+        "type": "integer",
+        "string": "# Signatures"
+    },
+    "is_seo_optimized": {
+        "type": "boolean",
+        "string": "SEO optimized"
+    },
+    "website_meta_title": {
+        "type": "char",
+        "string": "Website meta title"
+    },
+    "website_meta_description": {
+        "type": "text",
+        "string": "Website meta description"
+    },
+    "website_meta_keywords": {
+        "type": "char",
+        "string": "Website meta keywords"
+    },
+    "website_meta_og_img": {
+        "type": "char",
+        "string": "Website opengraph image"
+    },
+    "website_id": {
+        "type": "many2one",
+        "help": "Restrict publishing to this website.",
+        "string": "Website"
+    },
+    "is_published": {
+        "type": "boolean",
+        "string": "Is Published"
+    },
+    "can_publish": {
+        "type": "boolean",
+        "string": "Can Publish"
+    },
+    "website_url": {
+        "type": "char",
+        "help": "The full URL to access the document through the website.",
+        "string": "Website URL"
+    },
+    "website_published": {
+        "type": "boolean",
+        "string": "Visible on current website"
+    },
+    "visitor_ids": {
+        "type": "many2many",
+        "string": "Visitors"
+    },
+    "credit": {
+        "type": "monetary",
+        "help": "Total amount this customer owes you.",
+        "string": "Total Receivable"
+    },
+    "debit": {
+        "type": "monetary",
+        "help": "Total amount you have to pay to this vendor.",
+        "string": "Total Payable"
+    },
+    "debit_limit": {
+        "type": "monetary",
+        "string": "Payable Limit"
+    },
+    "total_invoiced": {
+        "type": "monetary",
+        "string": "Total Invoiced"
+    },
+    "currency_id": {
+        "type": "many2one",
+        "help": "Utility field to express amount currency",
+        "string": "Currency"
+    },
+    "journal_item_count": {
+        "type": "integer",
+        "string": "Journal Items"
+    },
+    "property_account_payable_id": {
+        "type": "many2one",
+        "help": "This account will be used instead of the default one as the payable account for the current partner",
+        "string": "Account Payable"
+    },
+    "property_account_receivable_id": {
+        "type": "many2one",
+        "help": "This account will be used instead of the default one as the receivable account for the current partner",
+        "string": "Account Receivable"
+    },
+    "property_account_position_id": {
+        "type": "many2one",
+        "help": "The fiscal position determines the taxes/accounts used for this contact.",
+        "string": "Fiscal Position"
+    },
+    "property_payment_term_id": {
+        "type": "many2one",
+        "help": "This payment term will be used instead of the default one for sales orders and customer invoices",
+        "string": "Customer Payment Terms"
+    },
+    "property_supplier_payment_term_id": {
+        "type": "many2one",
+        "help": "This payment term will be used instead of the default one for purchase orders and vendor bills",
+        "string": "Vendor Payment Terms"
+    },
+    "ref_company_ids": {
+        "type": "one2many",
+        "string": "Companies that refers to partner"
+    },
+    "has_unreconciled_entries": {
+        "type": "boolean",
+        "help": "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed.",
+        "string": "Has Unreconciled Entries"
+    },
+    "last_time_entries_checked": {
+        "type": "datetime",
+        "help": "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button.",
+        "string": "Latest Invoices & Payments Matching Date"
+    },
+    "invoice_ids": {
+        "type": "one2many",
+        "string": "Invoices"
+    },
+    "contract_ids": {
+        "type": "one2many",
+        "string": "Partner Contracts"
+    },
+    "bank_account_count": {
+        "type": "integer",
+        "string": "Bank"
+    },
+    "trust": {
+        "type": "selection",
+        "string": "Degree of trust you have in this debtor"
+    },
+    "invoice_warn": {
+        "type": "selection",
+        "help": "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field.",
+        "string": "Invoice"
+    },
+    "invoice_warn_msg": {
+        "type": "text",
+        "string": "Message for Invoice"
+    },
+    "supplier_rank": {
+        "type": "integer",
+        "string": "Supplier Rank"
+    },
+    "customer_rank": {
+        "type": "integer",
+        "string": "Customer Rank"
+    },
+    "team_id": {
+        "type": "many2one",
+        "help": "If set, this Sales Team will be used for sales and assignations related to this partner",
+        "string": "Sales Team"
+    },
+    "opportunity_ids": {
+        "type": "one2many",
+        "string": "Opportunities"
+    },
+    "meeting_ids": {
+        "type": "many2many",
+        "string": "Meetings"
+    },
+    "opportunity_count": {
+        "type": "integer",
+        "string": "Opportunity"
+    },
+    "meeting_count": {
+        "type": "integer",
+        "string": "# Meetings"
+    },
+    "ticket_count": {
+        "type": "integer",
+        "string": "Tickets"
+    },
+    "task_ids": {
+        "type": "one2many",
+        "string": "Tasks"
+    },
+    "task_count": {
+        "type": "integer",
+        "string": "# Tasks"
+    },
+    "website_description": {
+        "type": "html",
+        "string": "Website Partner Full Description"
+    },
+    "website_short_description": {
+        "type": "text",
+        "string": "Website Partner Short Description"
+    },
+    "online_partner_vendor_name": {
+        "type": "char",
+        "help": "Technical field used to store information from plaid/yodlee to match partner (used when a purchase is made)",
+        "string": "Online Partner Vendor Name"
+    },
+    "online_partner_bank_account": {
+        "type": "char",
+        "help": "Technical field used to store information from plaid/yodlee to match partner",
+        "string": "Online Partner Bank Account"
+    },
+    "l10n_sg_unique_entity_number": {
+        "type": "char",
+        "string": "UEN"
+    },
+    "payment_token_ids": {
+        "type": "one2many",
+        "string": "Payment Tokens"
+    },
+    "payment_token_count": {
+        "type": "integer",
+        "string": "Count Payment Token"
+    },
+    "property_purchase_currency_id": {
+        "type": "many2one",
+        "help": "This currency will be used, instead of the default one, for purchases from the current partner",
+        "string": "Supplier Currency"
+    },
+    "purchase_order_count": {
+        "type": "integer",
+        "string": "Purchase Order Count"
+    },
+    "supplier_invoice_count": {
+        "type": "integer",
+        "string": "# Vendor Bills"
+    },
+    "purchase_warn": {
+        "type": "selection",
+        "help": "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field.",
+        "string": "Purchase Order"
+    },
+    "purchase_warn_msg": {
+        "type": "text",
+        "string": "Message for Purchase Order"
+    },
+    "issue_count": {
+        "type": "integer",
+        "string": "# Issues"
+    },
+    "sale_order_count": {
+        "type": "integer",
+        "string": "Sale Order Count"
+    },
+    "sale_order_ids": {
+        "type": "one2many",
+        "string": "Sales Order"
+    },
+    "sale_warn": {
+        "type": "selection",
+        "help": "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field.",
+        "string": "Sales Warnings"
+    },
+    "sale_warn_msg": {
+        "type": "text",
+        "string": "Message for Sales Order"
+    },
+    "slide_channel_ids": {
+        "type": "many2many",
+        "string": "eLearning Courses"
+    },
+    "slide_channel_count": {
+        "type": "integer",
+        "string": "Course Count"
+    },
+    "slide_channel_company_count": {
+        "type": "integer",
+        "string": "Company Course Count"
+    },
+    "image_1920": {
+        "type": "binary",
+        "string": "Image"
+    },
+    "image_1024": {
+        "type": "binary",
+        "string": "Image 1024"
+    },
+    "image_512": {
+        "type": "binary",
+        "string": "Image 512"
+    },
+    "image_256": {
+        "type": "binary",
+        "string": "Image 256"
+    },
+    "image_128": {
+        "type": "binary",
+        "string": "Image 128"
+    },
+    "id": {
+        "type": "integer",
+        "string": "ID"
+    },
+    "create_uid": {
+        "type": "many2one",
+        "string": "Created by"
+    },
+    "create_date": {
+        "type": "datetime",
+        "string": "Created on"
+    },
+    "write_uid": {
+        "type": "many2one",
+        "string": "Last Updated by"
+    },
+    "write_date": {
+        "type": "datetime",
+        "string": "Last Updated on"
+    },
+    "__last_update": {
+        "type": "datetime",
+        "string": "Last Modified on"
+    },
+    "is_partner": {
+        "type": "boolean",
+        "string": "Is a Partner"
+    },
+    "manager_employee_id": {
+        "type": "many2one",
+        "string": "Partner Manager"
+    },
+    "is_po_required": {
+        "type": "boolean",
+        "string": "PO Required"
+    },
+    "customer": {
+        "type": "boolean",
+        "help": "Check this box if this contact is a customer. It can be selected in sales orders.",
+        "string": "Is a Customer"
+    },
+    "hardcopy_sign_required": {
+        "type": "boolean",
+        "string": "Hard Copy Sign Required"
+    },
+    "hardcopy_invoice_required": {
+        "type": "boolean",
+        "string": "Hard Copy Invoice Required"
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Completion Date"
+    },
+    "lead_create_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Creation Date"
+    },
+    "date_conversion": {
+        "type": "datetime",
+        "required": false,
+        "string": "Conversion Date"
+    },
+    "date_deadline": {
+        "type": "date",
+        "required": false,
+        "string": "Expected Closing"
+    },
+    "date_closed": {
+        "type": "datetime",
+        "required": false,
+        "string": "Closed Date"
+    },
+    "author_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Assigned To"
+    },
+    "user_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Salesperson"
+    },
+    "team_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Sales Team"
+    },
+    "lead_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Opportunity"
+    },
+    "body": {
+        "type": "html",
+        "required": false,
+        "string": "Activity Description"
+    },
+    "subtype_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Subtype"
+    },
+    "mail_activity_type_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Activity Type"
+    },
+    "country_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Country"
+    },
+    "company_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Company"
+    },
+    "stage_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Stage"
+    },
+    "partner_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Customer"
+    },
+    "lead_type": {
+        "type": "selection",
+        "help": "Type is used to separate Leads and Opportunities",
+        "required": false,
+        "string": "Type"
+    },
+    "active": {
+        "type": "boolean",
+        "required": false,
+        "string": "Active"
+    },
+    "won_status": {
+        "type": "selection",
+        "required": false,
+        "string": "Is Won"
+    },
+    "id": {
+        "type": "integer",
+        "required": false,
+        "string": "ID"
+    },
+    "display_name": {
+        "type": "char",
+        "required": false,
+        "string": "Display Name"
+    },
+    "__last_update": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Modified on"
+    }
+}

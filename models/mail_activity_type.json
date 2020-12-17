@@ -1,0 +1,163 @@
+{
+    "name": {
+        "type": "char",
+        "required": true,
+        "string": "Name"
+    },
+    "summary": {
+        "type": "char",
+        "required": false,
+        "string": "Default Summary"
+    },
+    "sequence": {
+        "type": "integer",
+        "required": false,
+        "string": "Sequence"
+    },
+    "active": {
+        "type": "boolean",
+        "required": false,
+        "string": "Active"
+    },
+    "create_uid": {
+        "type": "many2one",
+        "required": false,
+        "string": "Create Uid"
+    },
+    "delay_count": {
+        "type": "integer",
+        "help": "Number of days/week/month before executing the action. It allows to plan the action deadline.",
+        "required": false,
+        "string": "Scheduled Date"
+    },
+    "delay_unit": {
+        "type": "selection",
+        "help": "Unit of delay",
+        "required": true,
+        "string": "Delay units"
+    },
+    "delay_from": {
+        "type": "selection",
+        "help": "Type of delay",
+        "required": true,
+        "string": "Delay Type"
+    },
+    "icon": {
+        "type": "char",
+        "help": "Font awesome icon e.g. fa-tasks",
+        "required": false,
+        "string": "Icon"
+    },
+    "decoration_type": {
+        "type": "selection",
+        "help": "Change the background color of the related activities of this type.",
+        "required": false,
+        "string": "Decoration Type"
+    },
+    "res_model_id": {
+        "type": "many2one",
+        "help": "Specify a model if the activity should be specific to a model and not available when managing activities for other models.",
+        "required": false,
+        "string": "Model"
+    },
+    "default_next_type_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Default Next Activity"
+    },
+    "force_next": {
+        "type": "boolean",
+        "required": false,
+        "string": "Trigger Next Activity"
+    },
+    "next_type_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Recommended Next Activities"
+    },
+    "previous_type_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Preceding Activities"
+    },
+    "mail_template_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Email templates"
+    },
+    "default_description": {
+        "type": "html",
+        "required": false,
+        "string": "Default Description"
+    },
+    "initial_res_model_id": {
+        "type": "many2one",
+        "help": "Technical field to keep trace of the model at the beginning of the edition for UX related behaviour",
+        "required": false,
+        "string": "Initial model"
+    },
+    "res_model_change": {
+        "type": "boolean",
+        "help": "Technical field for UX related behaviour",
+        "required": false,
+        "string": "Model has change"
+    },
+    "is_notify": {
+        "type": "boolean",
+        "help": "Send notification for this type of activity",
+        "required": false,
+        "string": "Send notification"
+    },
+    "tag_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Tag"
+    },
+    "folder_id": {
+        "type": "many2one",
+        "help": "By defining a folder, the upload activities will generate a document",
+        "required": false,
+        "string": "Folder"
+    },
+    "default_user_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Default User"
+    },
+    "category": {
+        "type": "selection",
+        "help": "Actions may trigger specific behavior like opening calendar view or automatically mark as done when a document is uploaded",
+        "required": false,
+        "string": "Action to Perform"
+    },
+    "id": {
+        "type": "integer",
+        "required": false,
+        "string": "ID"
+    },
+    "display_name": {
+        "type": "char",
+        "required": false,
+        "string": "Display Name"
+    },
+    "create_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Created on"
+    },
+    "write_uid": {
+        "type": "many2one",
+        "required": false,
+        "string": "Last Updated by"
+    },
+    "write_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Updated on"
+    },
+    "__last_update": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Modified on"
+    }
+}

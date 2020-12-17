@@ -1,0 +1,1 @@
+erppeek  --server=https://odootest.justanalytics.com -d Justanalytic_20201111 -u hemanta.banerjee@justanalytics.com -p P@ssw0rd123

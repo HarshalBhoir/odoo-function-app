@@ -1,0 +1,174 @@
+{
+    "res_model_id": {
+        "type": "many2one",
+        "required": true,
+        "string": "Document Model"
+    },
+    "res_model": {
+        "type": "char",
+        "required": false,
+        "string": "Related Document Model"
+    },
+    "res_id": {
+        "type": "many2one_reference",
+        "required": true,
+        "string": "Related Document ID"
+    },
+    "res_name": {
+        "type": "char",
+        "help": "Display name of the related document.",
+        "required": false,
+        "string": "Document Name"
+    },
+    "activity_type_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Activity Type"
+    },
+    "activity_category": {
+        "type": "selection",
+        "help": "Actions may trigger specific behavior like opening calendar view or automatically mark as done when a document is uploaded",
+        "required": false,
+        "string": "Action to Perform"
+    },
+    "activity_decoration": {
+        "type": "selection",
+        "help": "Change the background color of the related activities of this type.",
+        "required": false,
+        "string": "Decoration Type"
+    },
+    "icon": {
+        "type": "char",
+        "help": "Font awesome icon e.g. fa-tasks",
+        "required": false,
+        "string": "Icon"
+    },
+    "summary": {
+        "type": "char",
+        "required": false,
+        "string": "Summary"
+    },
+    "note": {
+        "type": "html",
+        "required": false,
+        "string": "Note"
+    },
+    "date_deadline": {
+        "type": "date",
+        "required": true,
+        "string": "Due Date"
+    },
+    "automated": {
+        "type": "boolean",
+        "help": "Indicates this activity has been created automatically and not by any user.",
+        "required": false,
+        "string": "Automated activity"
+    },
+    "user_id": {
+        "type": "many2one",
+        "required": true,
+        "string": "Assigned to"
+    },
+    "state": {
+        "type": "selection",
+        "required": false,
+        "string": "State"
+    },
+    "recommended_activity_type_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Recommended Activity Type"
+    },
+    "previous_activity_type_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Previous Activity Type"
+    },
+    "has_recommended_activities": {
+        "type": "boolean",
+        "help": "Technical field for UX purpose",
+        "required": false,
+        "string": "Next activities available"
+    },
+    "mail_template_ids": {
+        "type": "many2many",
+        "required": false,
+        "string": "Email templates"
+    },
+    "force_next": {
+        "type": "boolean",
+        "required": false,
+        "string": "Trigger Next Activity"
+    },
+    "can_write": {
+        "type": "boolean",
+        "help": "Technical field to hide buttons if the current user has no access.",
+        "required": false,
+        "string": "Can Write"
+    },
+    "calendar_event_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Calendar Meeting"
+    },
+    "url_user": {
+        "type": "char",
+        "required": false,
+        "string": "Url User"
+    },
+    "res_type": {
+        "type": "char",
+        "required": false,
+        "string": "Document Type"
+    },
+    "supervisor_user_id": {
+        "type": "many2one",
+        "required": false,
+        "string": "Supervisor"
+    },
+    "id": {
+        "type": "integer",
+        "required": false,
+        "string": "ID"
+    },
+    "display_name": {
+        "type": "char",
+        "required": false,
+        "string": "Display Name"
+    },
+    "create_uid": {
+        "type": "many2one",
+        "required": false,
+        "string": "Created by"
+    },
+    "create_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Created on"
+    },
+    "write_uid": {
+        "type": "many2one",
+        "required": false,
+        "string": "Last Updated by"
+    },
+    "write_date": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Updated on"
+    },
+    "__last_update": {
+        "type": "datetime",
+        "required": false,
+        "string": "Last Modified on"
+    },
+    "x_studio_field_4sZGO": {
+        "type": "integer",
+        "required": false,
+        "string": "New Related Field"
+    },
+    "x_studio_document_type": {
+        "type": "char",
+        "required": false,
+        "string": "Document Type"
+    }
+}

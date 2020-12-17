@@ -1,0 +1,12 @@
+{
+    "model_name": "res.partner",
+    "method_name": "search_read",
+    "parameters_by_position": [
+        [
+            [
+                "is_company", "=", true
+            ]
+        ]
+    ],
+    "parameters_by_keyword": {}
+}

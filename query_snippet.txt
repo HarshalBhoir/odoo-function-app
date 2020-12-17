@@ -1,0 +1,74 @@
+// get field
+{
+    "model_name": "mail.activity",
+    "method_name": "fields_get",
+    "parameters_by_position": [],
+    "parameters_by_keyword": {"attributes": ["string", "help", "type", "required"]}
+}
+
+// create lead
+{
+    "model_name": "crm.lead",
+    "method_name": "create",
+    "parameters_by_position": [
+        {
+            "name": "1 new lead",
+            "description": "lead des",
+            "type": "opportunity",
+            "customer_partner_id": 94491,
+            "partner_id": 94491
+        }
+    ],
+    "parameters_by_keyword": {}
+}
+
+// search lead
+{
+    "model_name": "crm.lead",
+    "method_name": "search_read",
+    "parameters_by_position": [[["id", "=", 2847]]],
+    "parameters_by_keyword": {"limit": 5}
+}
+
+// search activity
+{
+    "model_name": "mail.activity",
+    "method_name": "search_read",
+    "parameters_by_position": [
+        [
+            ["res_model","=","crm.lead"],
+            ["res_id","=",2847]
+        ]
+    ],
+    "parameters_by_keyword": {"limit": 5}
+}
+
+// search activity type
+{
+    "model_name": "mail.activity.type",
+    "method_name": "search_read",
+    "parameters_by_position": [
+        [
+            ["res_model_id","=",false]
+        ]
+    ],
+    "parameters_by_keyword": {"fields": ["id", "name"]}
+}
+
+// create activity
+{
+    "model_name": "mail.activity",
+    "method_name": "create",
+    "parameters_by_position": [
+        {
+			"res_model_id": 311,
+			"res_id": 2847,
+			"date_deadline": "2020-12-23",
+			"user_id": "667",
+            "activity_type_id": 1
+		}
+    ],
+    "parameters_by_keyword": {}
+}
+
+
