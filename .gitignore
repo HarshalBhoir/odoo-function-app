@@ -1,4 +1,3 @@
-.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -130,3 +129,6 @@ obj
 appsettings.json
 local.settings.json
 .python_packages
+
+# vscode
+.vscode

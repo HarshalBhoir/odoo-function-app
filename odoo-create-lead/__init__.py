@@ -15,7 +15,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     username = os.getenv('ODOO_DB_ID')
     password = os.getenv('ODOO_DB_PASSWORD')
 
-        # login to db
+    # login to db
     common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
     uid = common.authenticate(db, username, password, {})
 

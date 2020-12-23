@@ -5,3 +5,7 @@ test
 .venv
 models
 odoo-test
+odoo-create-customer
+odoo-create-lead
+odoo-list-customer
+odoo-search-person
